@@ -1,0 +1,13 @@
+ISMEAR = 0  # Gaussian smearing
+SIGMA = 0.1
+
+# Spin polarization
+ISYM = -1
+ENCUT = 320.
+PREC = Accurate
+
+ALGO = None
+NELM = 0
+LEMBED = T
+EMBED_SITES = 34 35 41 42 53 
+EMBED_TYPE = 6

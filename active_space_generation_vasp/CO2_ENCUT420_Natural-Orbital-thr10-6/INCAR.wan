@@ -1,0 +1,28 @@
+ISMEAR = 0  # Gaussian smearing
+SIGMA = 0.1
+
+# Spin polarization
+ISYM = -1
+ENCUT = 420.
+ENAUG  = 963.7
+PREC = Accurate
+
+ALGO = None
+NELM = 0
+LUMCO = T                 # use UMCO
+LOCPROJ_IAO = T           # use Intrinsic Atomic Orbitals
+LOCPROJ_ORTH_IAO = F      # dont need orthogonal IAOs
+UMCO_PM_PROJTYPE = 1      # IAOs are used as projectors for localization
+UMCO_FUNCTIONAL = PM      # use Pipek-Mezey localization (together with IAOs this gives IBOs)
+LUMCO_INIT_RANDOM = T     # stochastic initial unitary
+UMCO_GRAD_BREAK = 1E-10   # quite safe break condition
+LWAVE_WANNIER = T         # write out localized orbitals as WAVECAR.wan
+
+LOCPROJ =  "
+  1 - 1 : s p : Ps 
+  2 - 3 : s p : Ps
+  "      # the inital atomic orbitals to construct the IAOs. Best choice: take all projectors available on all atoms. If one makes a mistake here, the result is useless.
+
+LWRITE_WANNIER_XSF = T
+LCHARG = .FALSE.
+LWAVE = .FALSE.

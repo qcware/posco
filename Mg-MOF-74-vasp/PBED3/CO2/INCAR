@@ -1,0 +1,29 @@
+SYSTEM = CO2
+
+# Electronic Relaxation
+ISTART = 0
+ICHARG = 2
+ISMEAR = 0  # Gaussian smearing
+SIGMA = 0.1
+ENCUT = 1000.0  # Typically, VASP recommends using higher ENCUT, set to 2 * Ecutwfc in QE
+ENAUG  =  644.9 
+PREC = Accurate
+
+# Spin polarization
+
+# Convergence criteria
+EDIFF = 1E-7
+NELM = 500
+
+# Electronic minimization
+ALGO = All
+TIME = 0.05
+LREAL = Auto
+
+#van der Waals
+IVDW = 11
+
+# Output settings
+LWAVE = .TRUE.
+LCHARG = .TRUE.
+NWRITE = 1

@@ -1,0 +1,15 @@
+ISMEAR = 0  # Gaussian smearing
+SIGMA = 0.1
+
+# Spin polarization
+ISYM = -1
+ENCUT = 320.
+ENAUG  = 963.7
+PREC = Accurate
+
+ALGO = None
+NELM = 0
+LPARD = .TRUE.
+LSEPB = .TRUE.
+LSEPK = .TRUE.
+IBAND = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25

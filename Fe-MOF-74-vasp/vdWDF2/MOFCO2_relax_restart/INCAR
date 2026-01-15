@@ -1,0 +1,51 @@
+SYSTEM = MOFCO2
+
+# Electronic Relaxation
+ISTART = 2
+ICHARG = 0
+ISMEAR = 0  # Gaussian smearing
+SIGMA = 0.1
+ENCUT = 1000.0  # Typically, VASP recommends using higher ENCUT, set to 2 * Ecutwfc in QE
+PREC = Accurate
+
+# Spin polarization
+ISPIN = 2
+MAGMOM = 51*0.0 3*1.0 3*-1.0  # Adjust according to QE starting_magnetization
+
+# vdW-DF functional
+GGA       = ML
+AGGAC     = 0.0
+LUSE_VDW  = .TRUE.
+ZAB_VDW   = -1.8867 # the default is -0.8491
+LASPH     = .TRUE.
+LUSE_VDW  = .TRUE.
+
+# Convergence criteria
+EDIFF = 1E-7
+EDIFFG = -0.01
+NELM = 500
+
+# Ion relaxation
+IBRION = 2  # Conjugate gradient algorithm
+ISIF = 2  # Relax positions
+POTIM = 0.05
+NSW = 200
+
+# Electronic minimization
+ALGO = All
+TIME = 0.05
+LREAL = Auto
+
+# Hubbard U
+LDAU = .TRUE.
+LDAUTYPE = 2
+LDAUL = -1 -1 -1 2 
+LDAUU = 0.0 0.0 0.0 4.0 
+LDAUJ = 0.0 0.0 0.0 0.0 
+LDAUPRINT = 1
+
+# Output settings
+LWAVE = .TRUE.
+LCHARG = .TRUE.
+NWRITE = 1
+LORBIT = 11

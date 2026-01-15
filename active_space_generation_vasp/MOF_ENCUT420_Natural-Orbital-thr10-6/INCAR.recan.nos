@@ -1,0 +1,36 @@
+SYSTEM = MOF
+
+# Electronic Relaxation
+ISMEAR = 0  # Gaussian smearing
+SIGMA = 0.1
+ENCUT = 420.
+PREC = Accurate
+
+# Spin polarization
+ISYM = -1
+
+# Convergence criteria
+NELM = 1
+
+# Ion relaxation (turn off ionic optimization)
+IBRION = -1  # No ionic relaxation
+NSW = 0  # Number of ionic steps to perform (0 means no ionic steps)
+
+# Electronic minimization
+ALGO = sub
+NBANDS = 721
+NBANDSHIGH = 721
+NBANDSLOW = 131
+TIME = 0.05
+
+# HF calculation
+LHFCALC = .TRUE. 
+AEXX    = 1
+LASPH = .TRUE.
+PRECFOCK = Normal
+
+# Output settings
+LWAVE = .TRUE.
+LCHARG = .TRUE.
+NWRITE = 1
+LORBIT = 11

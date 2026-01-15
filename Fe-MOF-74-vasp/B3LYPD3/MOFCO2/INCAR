@@ -1,0 +1,46 @@
+SYSTEM = MOFCO2
+
+# Electronic Relaxation
+ISTART = 0
+ICHARG = 2
+ISMEAR = 0  # Gaussian smearing
+SIGMA = 0.1
+PREC = Accurate
+
+# Spin polarization
+ISPIN = 2
+MAGMOM = 51*0.0 3*1.0 3*-1.0 
+
+# Convergence criteria
+EDIFF = 1E-5
+NELM = 500
+
+# Ion relaxation (turn off ionic optimization)
+IBRION = -1  # No ionic relaxation
+NSW = 0  # Number of ionic steps to perform (0 means no ionic steps)
+
+# Electronic minimization
+ALGO = All
+TIME = 0.05
+LREAL = Auto
+
+# B3LYP calculation
+LHFCALC = .TRUE. 
+GGA     = B3 
+AEXX    = 0.2
+AGGAX   = 0.72 
+AGGAC   = 0.81 
+ALDAC   = 0.19
+LASPH = .TRUE.
+PRECFOCK = Normal
+
+#van der Waals
+IVDW = 11
+VDW_S8 = 1.703
+VDW_SR = 1.261
+
+# Output settings
+LWAVE = .TRUE.
+LCHARG = .TRUE.
+NWRITE = 1
+LORBIT = 11

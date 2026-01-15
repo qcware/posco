@@ -1,0 +1,44 @@
+SYSTEM = MOF
+
+# Electronic Relaxation
+ISTART = 0
+ICHARG = 2
+ISMEAR = 0  # Gaussian smearing
+SIGMA = 0.1
+ENCUT = 1000.0  # Typically, VASP recommends using higher ENCUT, set to 2 * Ecutwfc in QE
+PREC = Accurate
+
+# Spin polarization
+ISPIN = 2
+MAGMOM = 48*0.0 3*1.0 3*-1.0  # Adjust according to QE starting_magnetization
+
+# Convergence criteria
+EDIFF = 1E-7
+NELM = 500
+
+# Ion relaxation (turn off ionic optimization)
+IBRION = -1  # No ionic relaxation
+NSW = 0  # Number of ionic steps to perform (0 means no ionic steps)
+
+# Electronic minimization
+ALGO = All
+TIME = 0.05
+LREAL = Auto
+
+# Hubbard U
+LDAU = .TRUE.
+LDAUTYPE = 2
+LASPH = .TRUE.
+LDAUL = -1 -1 -1 2 
+LDAUU = 0.0 0.0 0.0 4.0 
+LDAUJ = 0.0 0.0 0.0 0.0 
+LDAUPRINT = 1
+
+#van der Waals
+IVDW = 11
+
+# Output settings
+LWAVE = .TRUE.
+LCHARG = .TRUE.
+NWRITE = 1
+LORBIT = 11

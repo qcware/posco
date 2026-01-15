@@ -1,0 +1,5 @@
+The FCIDUMP files have been generated with the following parameters
+
+CO2 NBANDS=26
+MOF NBANDS=182 NFREEZE=142
+MOFCO2 NBANDS=190 NFREEZE=148

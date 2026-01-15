@@ -1,0 +1,38 @@
+SYSTEM = MOF
+
+# Electronic Relaxation
+ISTART = 0
+ICHARG = 2
+ISMEAR = 0  # Gaussian smearing
+SIGMA = 0.1
+ENCUT = 1000.0  # Typically, VASP recommends using higher ENCUT, set to 2 * Ecutwfc in QE
+PREC = Accurate
+
+# Spin polarization
+
+# SCAN+rVV10 
+METAGGA   = SCAN
+LUSE_VDW  = .TRUE.
+BPARAM    = 15.7    # the default value is 6.3
+CPARAM    = 0.0093  # default but can be overwritten by this tag
+LASPH     = .TRUE.
+
+# Convergence criteria
+EDIFF = 1E-7
+NELM = 500
+
+# Ion relaxation
+IBRION = -1  # No ionic relaxation
+NSW = 0
+
+# Electronic minimization
+ALGO = All
+TIME = 0.05
+LREAL = Auto
+
+# Hubbard U
+
+# Output settings
+LWAVE = .TRUE.
+LCHARG = .TRUE.
+NWRITE = 1
